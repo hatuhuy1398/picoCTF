@@ -7,6 +7,7 @@ def rot13(text):
     for char in text:
         if char.isalpha():
             ascii_offset = 65 if char.isupper() else 97
+            #from a to z
             encoded_char = chr((ord(char) - ascii_offset + 13) % 26 + ascii_offset)
             result += encoded_char
         else:
